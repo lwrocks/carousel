@@ -36,5 +36,8 @@ leftButton.addEventListener("click", function() {
 });
 
 rightButton.addEventListener("click", function() {
-    
-})
+  if (offset !== maxX) {
+    offset -= carouselWidth + cardMarginRight;
+    carousel.style.transform = `translateX(${offset}px)`;
+  }
+});
