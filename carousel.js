@@ -1,58 +1,60 @@
-const slideIndex = 1;
-let myTimer;
-let slideshowContainer;
+var slideIndex = 1;
 
-window.addEventListener("load", function() {
+var myTimer;
+
+var slideshowContainer;
+
+window.addEventListener("load", function () {
   showSlides(slideIndex);
-  myTimer = setInterval(function() {
+  myTimer = setInterval(function () {
     plusSlides(1);
   }, 4000);
 
-  //   Comment out the line below to keep arrows part of mouseenter pause/resume
+  //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
   slideshowContainer = document.getElementsByClassName("slideshow-inner")[0];
 
-  //   Uncomment out the line below to keep arrows part of mouseenter pause/resume
-    // slideshowContainer = document.getElementsByClassName(
-    //   "slideshow-container"
-    // )[0];
+  //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+  // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
 
   slideshowContainer.addEventListener("mouseenter", pause);
   slideshowContainer.addEventListener("mouseleave", resume);
 });
 
-// Next and Previous Controls
+// NEXT AND PREVIOUS CONTROL
 function plusSlides(n) {
   clearInterval(myTimer);
   if (n < 0) {
-    showSlides(slideIndex -= 1);
+    showSlides((slideIndex -= 1));
   } else {
-    showSlides(slideIndex += 1);
+    showSlides((slideIndex += 1));
   }
-  //   Comment out the lines below to keep arrows part of mouseenter pause/resume
+
+  //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+
   if (n === -1) {
-    myTimer = setInterval(function() {
+    myTimer = setInterval(function () {
       plusSlides(n + 2);
     }, 4000);
   } else {
-    myTimer = setInterval(function() {
+    myTimer = setInterval(function () {
       plusSlides(n + 1);
     }, 4000);
   }
 }
 
-// Controls the current slide and resets interval if needed
+//Controls the current slide and resets interval if needed
 function currentSlide(n) {
   clearInterval(myTimer);
-  myTimer = setInterval(function() {
+  myTimer = setInterval(function () {
     plusSlides(n + 1);
   }, 4000);
-  showSlides(slideIndex = n);
+  showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -75,7 +77,7 @@ pause = () => {
 
 resume = () => {
   clearInterval(myTimer);
-  myTimer = setInterval(function() {
+  myTimer = setInterval(function () {
     plusSlides(slideIndex);
   }, 4000);
 };
