@@ -4,38 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carousel Part Deux</title>
+    <link rel="stylesheet" href="carousel.css" />
   </head>
   <body>
     <h1>Chicago Carousel</h1>
     <p>A carousel of photos from Chicago.</p>
     <div class="slideshow-container">
-      <div class="mySlides fade">
-        <img
-          src="./images/Carousel Image-1.jpg"
-          alt="Chicago Baseball Cap"
-          width="100%"
-        />
+      <div class="slideshow-inner">
+        <div class="mySlides fade">
+          <img
+            src="./images/Carousel Image-1.jpg"
+            alt="Chicago Baseball Cap"
+            width="100%"
+            height="400px"
+          />
+          <div class="text">A Cubs fan at Wrigley.</div>
+        </div>
+        <div class="mySlides fade">
+          <img
+            src="./images/Carousel Image-2.jpg"
+            alt="CTA Stairs"
+            width="100%"
+            height="400px"
+          />
+          <div class="text">The stairs at a CTA Brown Line in the loop.</div>
+        </div>
+        <div class="mySlides fade">
+          <img
+            src="./images/Carousel Image-3.jpg"
+            alt="Chicago Skyline Lake Michigan"
+            width="100%"
+            height="400px"
+          />
+          <div class="text">The view of the skyline from Lake Michigan.</div>
+        </div>
+        <div class="mySlides fade">
+          <img
+            src="./images/Carousel Image-4.jpg"
+            alt="Chicago Skyline Descent"
+            width="100%"
+            height="400px"
+          />
+          <div class="text">A flight descending into O'Hare.</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-      <div class="mySlides fade">
-        <img
-          src="./images/Carousel Image-2.jpg"
-          alt="CTA Stairs"
-          width="100%"
-        />
-      </div>
-      <div class="mySlides fade">
-        <img
-          src="./images/Carousel Image-3.jpg"
-          alt="Chicago Skyline Lake Michigan"
-          width="100%"
-        />
-      </div>
-      <div class="mySlides fade">
-        <img
-          src="./images/Carousel Image-4.jpg"
-          alt="Chicago Skyline Descent"
-          width="100%"
-        />
+      <br />
+      <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
       </div>
     </div>
   </body>
