@@ -5,38 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carousel</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Hamburger Menu Import -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-    <header>
-      <a href="#main-menu" class="menu-toggle" id="main-menu-toggle">
-        <span class="sr-only">Open Main Menu</span>
-        <span class="fa fa-bars" aria-hidden="true"></span>
+    <div class="topnav" id="myTopNav">
+      <a href="#home" class="active">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
       </a>
-      <h1 class="logo">hamburgers</h1>
-      <nav id="main-menu" class="main-menu" aria-label="main menu">
-        <a
-          href="#main-menu-toggle"
-          class="menu-close"
-          id="main-menu-close"
-          aria-label="close main menu"
-        >
-          <span class="sr-only">Close Main Menu</span>
-          <span class="fa fa-close" aria-hidden="true"></span>
-        </a>
-        <ul>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <a
-        href="#main-menu-toggle"
-        class="backdrop"
-        tabindex="-1"
-        aria-hidden="true"
-        hidden
-      ></a>
-    </header>
+    </div>
     <h1>Carousel</h1>
     <p>I just learned how to code a product carousel today!</p>
     <div class="wrapper">
