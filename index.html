@@ -7,6 +7,36 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <a href="#main-menu" class="menu-toggle" id="main-menu-toggle">
+        <span class="sr-only">Open Main Menu</span>
+        <span class="fa fa-bars" aria-hidden="true"></span>
+      </a>
+      <h1 class="logo">hamburgers</h1>
+      <nav id="main-menu" class="main-menu" aria-label="main menu">
+        <a
+          href="#main-menu-toggle"
+          class="menu-close"
+          id="main-menu-close"
+          aria-label="close main menu"
+        >
+          <span class="sr-only">Close Main Menu</span>
+          <span class="fa fa-close" aria-hidden="true"></span>
+        </a>
+        <ul>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <a
+        href="#main-menu-toggle"
+        class="backdrop"
+        tabindex="-1"
+        aria-hidden="true"
+        hidden
+      ></a>
+    </header>
     <h1>Carousel</h1>
     <p>I just learned how to code a product carousel today!</p>
     <div class="wrapper">
